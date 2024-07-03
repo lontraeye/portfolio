@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { IconButton, Switch } from '@mui/material';
+import ContrastIcon from '@mui/icons-material/Contrast';
+import Page from './components/Page/Index';
+import './App.css'
 
-function App() {
+interface AppProps {
+  toggleTheme: () => void;
+}
+
+const App: React.FC<AppProps> = ({ toggleTheme }) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Page />
+      <IconButton style={{color: 'white'}} onClick={toggleTheme} className='botao-tema'> 
+        <ContrastIcon />
+      </IconButton>
     </div>
   );
-}
+};
 
 export default App;

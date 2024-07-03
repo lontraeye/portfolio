@@ -1,0 +1,7 @@
+.info {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
