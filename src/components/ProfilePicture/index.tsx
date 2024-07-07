@@ -8,16 +8,16 @@ const ProfilePicture = () => {
     const theme = useTheme();
 
     const bgstyle = {
-        background: `linear-gradient(135deg, ${theme.palette.background.default} 25%, transparent 25%) -25px 0/ 50px 50px, 
-                     linear-gradient(225deg, ${theme.palette.background.paper} 25%, transparent 25%) -25px 0/ 50px 50px, 
-                     linear-gradient(315deg, ${theme.palette.background.default} 25%, transparent 25%) 0px 0/ 50px 50px, 
-                     linear-gradient(45deg, ${theme.palette.background.paper} 25%, ${theme.palette.secondary.main} 25%) 0px 0/ 50px 50px`,
+        backgroundColor: theme.palette.background.default,
+        backgroundImage: `radial-gradient(${theme.palette.secondary.main} 2px, ${theme.palette.background.paper} 2px)`,
+        backgroundSize: '40px 40px',
         overflow: 'hidden'
     };
+    
 
     return (
         <div className='framing' style={bgstyle}>
-            <img src={pfp} className="pfp" />
+            <img src={pfp} alt='pfp' className="pfp" />
         </div>
     );
 };

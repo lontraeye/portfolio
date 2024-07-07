@@ -1,20 +1,27 @@
 import React from 'react';
-import { IconButton, Switch } from '@mui/material';
+import { IconButton, useTheme } from '@mui/material';
 import ContrastIcon from '@mui/icons-material/Contrast';
-import Page from './components/Page/Index';
+import CvPage from './components/CvPage/Index';
 import './App.css'
 
 interface AppProps {
   toggleTheme: () => void;
 }
 
+
 const App: React.FC<AppProps> = ({ toggleTheme }) => {
+
+  const theme = useTheme();
+
   return (
     <div className='app'>
-      <Page />
-      <IconButton style={{color: 'white'}} onClick={toggleTheme} className='botao-tema'> 
-        <ContrastIcon />
-      </IconButton>
+      <CvPage />
+      <div className='menu'>
+        <IconButton style={{ color: theme.palette.primary.main }} onClick={toggleTheme}>
+          <ContrastIcon />
+        </IconButton>
+      </div>
+
     </div>
   );
 };

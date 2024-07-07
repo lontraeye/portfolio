@@ -1,8 +1,15 @@
 .app {
   display: flex;
-  height: 100vh;
+  flex-direction: row;
+  position: fixed;
 }
 
-.botao-tema {
-  height: fit-content;
+@media print {
+  .menu {
+    display: none;
+  }
+
+  .app {
+    display: contents;
+  }
 }

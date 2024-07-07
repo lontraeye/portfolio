@@ -3,8 +3,32 @@ import { createTheme } from '@mui/material/styles';
 const lightTheme = createTheme({
   palette: {
     primary: {
-      main: '#1C2541',
+      main: '#1C1C1C',
     },
+    secondary: {
+      main: '#DADDD8',
+    },
+    background: {
+      default: '#FAFAFF',
+      paper: '#ECEBE4',
+    },
+    text: {
+      primary: '#1C1C1C',
+    },
+  },
+  typography: {
+    h1: {
+      color: '#000000',
+      fontFamily: 'Inter, sans-serif',
+    },
+    h2: {
+      color: '#000000',
+      fontFamily: 'Inter, sans-serif',
+    },
+    h3: {
+      color: '#000000',
+      fontFamily: 'Inter, sans-serif',
+    }
   },
 });
 
@@ -18,7 +42,7 @@ const darkTheme = createTheme({
     },
     background: {
       default: '#0B132B',
-      paper:'#1C2541',
+      paper: '#1C2541',
     },
     text: {
       primary: '#FFFFFF',
@@ -47,7 +71,7 @@ const darkTheme = createTheme({
       },
     },
   }
-  
+
 });
 
 export { lightTheme, darkTheme };

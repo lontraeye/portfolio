@@ -1,0 +1,27 @@
+.vertical-line {
+    position: absolute;
+    left: 9px;
+    top: 10px;
+    bottom: 0;
+    width: 2px;
+    background-color: 'primary.main';
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: 'primary.main';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
