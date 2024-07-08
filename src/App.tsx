@@ -3,7 +3,6 @@ import { IconButton, useTheme } from '@mui/material';
 import ContrastIcon from '@mui/icons-material/Contrast';
 import CvPage from './components/CvPage/Index';
 import './App.css'
-import zIndex from '@mui/material/styles/zIndex';
 
 interface AppProps {
   toggleTheme: () => void;

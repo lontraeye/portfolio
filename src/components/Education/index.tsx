@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
 
-interface Education {
+interface EducationItem {
   course: string;
   institution: string;
   startYear: string;
@@ -9,7 +9,7 @@ interface Education {
   degree: string;
 }
 
-const education: Education[] = [
+const educations: EducationItem[] = [
   {
     course: 'Engenharia da computação',
     institution: 'Unipar, Cascavel',
@@ -19,7 +19,7 @@ const education: Education[] = [
   },
 ];
 
-const Education = () => {
+const EducationComponent = () => {
   return (
     <div className='overflow-y-auto max-h-[calc(100vh-180px)]'>
       <Container>
@@ -27,7 +27,7 @@ const Education = () => {
           Histórico Acadêmico
         </Typography>
         <Box sx={{ ml: 3 }}>
-          {education.map((edu, index) => (
+          {educations.map((edu, index) => (
             <Box
               key={index}
               sx={{
@@ -54,4 +54,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default EducationComponent;
