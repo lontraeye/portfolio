@@ -21,7 +21,7 @@ const educations: EducationItem[] = [
 
 const EducationComponent = () => {
   return (
-    <div className='overflow-y-auto max-h-[calc(100vh-180px)]'>
+    <div className='w-full overflow-y-auto max-h-[calc(100vh-180px)]'>
       <Container>
         <Typography variant="h1" fontSize={20} fontWeight={'bolder'} margin={3} gutterBottom>
           Histórico Acadêmico
