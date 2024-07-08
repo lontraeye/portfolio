@@ -5,27 +5,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 }
 
 .page {
     width: 794px;
-    height: 100vh;
+    height: 42cm;
     box-shadow: rgba(0, 0, 0, 1) 0px 19px 380px;
-    position: fixed;
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
 .header {
     display: flex;
     flex-direction: row;
     gap: 5%;
-    top: 0;
     position: relative;
     z-index: 2;
-    padding-inline: 1vw;
-    max-height: 30%;
-    height: 100%;
+    height: fit-content;
+    padding-inline: 30px;
+    margin-bottom: 1vh;
 }
 
 .wave {
@@ -41,17 +42,16 @@
     align-self: center;
     display: flex;
     flex-direction: column;
-    gap: 30px;
 }
 
 @media print {
-    .body * {
-        color: black;
-    }
     .MuiTypography-h1 {
         color: black !important;
     }
     .MuiTypography-h2 {
         color: black !important;
+    }
+    .MuiSvgIcon-root {
+        display: none !important;
     }
 }

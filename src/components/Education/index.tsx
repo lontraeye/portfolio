@@ -21,27 +21,22 @@ const education: Education[] = [
 
 const Education = () => {
   return (
-    <Container>
-      <Typography variant="h1" fontSize={20} fontWeight={'bolder'} margin={3} gutterBottom>
-        Histórico Acadêmico
-      </Typography>
-      <Box sx={{ position: 'relative', ml: 3 }}>
-        {education.map((edu, index) => (
-          <Box key={index} sx={{ position: 'relative', pl: '32px', pb: index === education.length - 1 ? '0' : '40px' }}>
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Box
-                sx={{
-                  width: '10px',
-                  height: '10px',
-                  borderRadius: '50%',
-                  position: 'absolute',
-                  left: '0',
-                  top: '50%',
-                  transform: 'translate(-50%, -50%)',
-                }}
-              />
-              <Box sx={{ ml: '32px'}}>
-                <Typography variant="h2" fontWeight="bold" fontSize={15}>
+    <div className='overflow-y-auto max-h-[calc(100vh-180px)]'>
+      <Container>
+        <Typography variant="h1" fontSize={20} fontWeight={'bolder'} margin={3} gutterBottom>
+          Histórico Acadêmico
+        </Typography>
+        <Box sx={{ ml: 3 }}>
+          {education.map((edu, index) => (
+            <Box
+              key={index}
+              sx={{
+                mb: 4,
+                pl: '32px',
+              }}
+            >
+              <Box sx={{ ml: '16px', maxWidth: 'calc(100vw - 112px)' }}>
+                <Typography variant="h2" fontSize={20} fontWeight="bold" sx={{ maxWidth: '100%' }}>
                   {edu.course} | {edu.institution}
                 </Typography>
                 <Typography variant="h2" fontSize={10} gutterBottom>
@@ -52,10 +47,10 @@ const Education = () => {
                 </Typography>
               </Box>
             </Box>
-          </Box>
-        ))}
-      </Box>
-    </Container>
+          ))}
+        </Box>
+      </Container>
+    </div>
   );
 };
 

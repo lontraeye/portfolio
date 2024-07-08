@@ -17,7 +17,7 @@ const App: React.FC<AppProps> = ({ toggleTheme }) => {
     <div className='app'>
       <CvPage />
       <div className='menu'>
-        <IconButton style={{ color: theme.palette.primary.main }} onClick={toggleTheme}>
+        <IconButton style={{ color: theme.palette.primary.main, position: 'absolute' }} onClick={toggleTheme}>
           <ContrastIcon />
         </IconButton>
       </div>

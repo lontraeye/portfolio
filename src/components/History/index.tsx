@@ -42,11 +42,10 @@ const jobs: Job[] = [
 ];
 
 const History = () => {
-
     const theme = useTheme();
 
     return (
-        <div className='box'>
+        <div className='overflow-y-auto max-h-[calc(100vh-180px)]'>
             <Container>
                 <Typography variant="h1" fontSize={20} fontWeight={'bolder'} margin={3} gutterBottom>
                     Histórico Profissional
@@ -82,6 +81,7 @@ const History = () => {
                                         backgroundColor: theme.palette.primary.main,
                                         position: 'absolute',
                                         left: '5px',
+                                        top: '10px',
                                     }}
                                 />
                             ) : (
@@ -94,7 +94,7 @@ const History = () => {
                                             backgroundColor: theme.palette.primary.main,
                                             position: 'absolute',
                                             left: '5px',
-                                            top: 0,
+                                            top: '10px',
                                         }}
                                     />
                                     {/* Continuação da linha vertical */}
@@ -102,7 +102,7 @@ const History = () => {
                                         sx={{
                                             position: 'absolute',
                                             left: '9px',
-                                            top: '10px',
+                                            top: '20px',
                                             height: 'calc(100% - 30px)', // Altura da linha menos a posição inicial e final
                                             width: '2px',
                                             backgroundColor: theme.palette.primary.main,
@@ -117,20 +117,20 @@ const History = () => {
                                             position: 'absolute',
                                             left: '0',
                                             top: 'calc(100% - 5px)',
-                                            color: theme.palette.primary.main
+                                            color: theme.palette.primary.main,
                                         }}
                                     />
                                 </>
                             )}
                             {/* Detalhes do trabalho */}
-                            <Box sx={{ ml: '32px' }}>
-                                <Typography variant="h2" fontSize={20} fontWeight="bold">
-                                    {job.title} | {job.company}
-                                </Typography>
+                            <Box sx={{ ml: '16px', maxWidth: 'calc(100vw - 112px)'}}>
+                                    <Typography className="truncate hover:text-balance" variant="h2" fontSize={20} fontWeight="bold" sx={{ maxWidth: '100%' }}>
+                                        {job.title} | {job.company}
+                                    </Typography>
                                 <Typography variant="h2" fontSize={10} gutterBottom>
                                     {job.startDate} - {job.endDate}
                                 </Typography>
-                                <Typography variant="h2" fontSize={15}>
+                                <Typography variant="h2" fontSize={15} sx={{ maxWidth: '100%' }}>
                                     {job.description}
                                 </Typography>
                             </Box>
